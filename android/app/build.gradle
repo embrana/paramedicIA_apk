@@ -24,15 +24,10 @@ android {
         }
     }
 
-    // 👇 Se agregó esto para forzar compatibilidad con Java 17
+    // 👇 Compatibilidad con Java 17
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
-    }
-
-    // 👇 Se recomienda también agregar esto si usás Kotlin
-    kotlinOptions {
-        jvmTarget = "17"
     }
 }
 
