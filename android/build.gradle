@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    
+
     repositories {
         google()
         mavenCentral()
@@ -21,6 +21,18 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+    }
+}
+
+/**
+ * 🔧 Fuerza Java 17 en absolutamente todos los sub-proyectos y tareas de compilación.
+ * Esto evita el error “invalid source release: 21” que surge en módulos externos
+ * como :capacitor-android.
+ */
+subprojects {
+    tasks.withType(JavaCompile).configureEach {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 
