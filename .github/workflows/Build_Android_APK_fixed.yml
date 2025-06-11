@@ -56,7 +56,7 @@ jobs:
           fi
 
       - name: Sync Capacitor with verbose logging
-        run: npx cap sync --verbose
+        run: npx cap sync
 
       - name: Build Android APK
         run: |
