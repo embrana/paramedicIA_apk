@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ParamedicIA</string>
+    <string name="title_activity_main">ParamedicIA</string>
+    <string name="package_name">io.paramedicIA.app</string>
+    <string name="custom_url_scheme">io.paramedicIA.app</string>
+</resources>
