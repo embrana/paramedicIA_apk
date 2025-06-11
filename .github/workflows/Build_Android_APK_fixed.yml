@@ -55,8 +55,12 @@ jobs:
             echo "Android platform already exists"
           fi
 
-      - name: Sync Capacitor with verbose logging
+      - name: Sync Capacitor
         run: npx cap sync
+
+      - name: Force Java 17 for Gradle
+        run: echo "org.gradle.java.home=$JAVA_HOME" >> gradle.properties
+        working-directory: android
 
       - name: Build Android APK
         run: |
